@@ -15,10 +15,10 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: 
+    key: !secret api_key
 
 ota:
-  password:
+  password: !secret ota_password
 
 wifi:
   ssid: !secret wifi_ssid
@@ -27,10 +27,11 @@ wifi:
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "Garage-Opener Fallback Hotspot"
-    password: 
+    password: !secret failback_password
 
 captive_portal:
 
+#This relay is wired to a pushbutton remote for the garage door opener
 switch:
     - platform: gpio
       name: opener
@@ -41,25 +42,30 @@ switch:
       restore_mode: ALWAYS_OFF
       internal: true
 
+#Hardwired magnetic reed switch mounted to back of door track
 binary_sensor:
   - platform: gpio
     name: "Open Sensor"
     pin: 
-      number: GPIO26
+      number: GPIO18
+      inverted: true
       mode: INPUT_PULLUP
     filters:
       - delayed_on_off: 50ms
     id: open_sensor
-#    internal: true
+
+#Hardwired magnetic reed switch mounted to top of door
   - platform: gpio
     name: "Close Sensor"
     pin: 
-      number: GPIO18
+      number: GPIO26
+      inverted: true
       mode: INPUT_PULLUP
     filters:
       - delayed_on_off: 50ms
     id: close_sensor
-#    internal: true
+
+#Deterministic sensor for vehicle occupancy
   - platform: template
     name: "Vehicle in Garage"
     device_class: occupancy
@@ -71,6 +77,8 @@ binary_sensor:
         // No vehicle is in the garage
         return false;
       }
+
+#Deterministic sensor for garage door status
   - platform: template
     name: "Garage Door Status"
     device_class: garage_door
@@ -83,27 +91,35 @@ binary_sensor:
         return false;
       }
 
-  - platform: template
+#Garage door opener configuration - opener --> relay --> pushbutton remote
+cover:
+  - platform: feedback
     device_class: garage
     name: $friendly_name
-    id: garage_door
-    lambda: |-
-      if (id(close_sensor).state == true) {
-        return COVER_CLOSED;
-      } else {
-        return COVER_OPEN;
-      }
+
+    has_built_in_endstop: true
+
     open_action:
       - switch.turn_on: opener
       - delay: 0.5s
       - switch.turn_off: opener
+    open_duration: 11s
+    open_endstop: open_sensor
+
     close_action:
       - switch.turn_on: opener
       - delay: 0.5s
-      - switch.turn_off: opener      
+      - switch.turn_off: opener
+    close_duration: 11s
+    close_endstop: close_sensor
+
+    stop_action:
+      - switch.turn_on: opener
+      - delay: 0.5s
+      - switch.turn_off: opener
 
 sensor:
- # Send WiFi signal strength & uptime to HA
+ # Ultrasonic sensor to determine vehicle occupancy
   - platform: ultrasonic
     trigger_pin: GPIO16
     echo_pin: GPIO17
@@ -112,9 +128,12 @@ sensor:
     timeout: 3m
     id: ultrasonic_sensor
 
+ # Send WiFi signal strength
   - platform: wifi_signal
     name: $friendly_name WiFi Strength
     update_interval: 60s
+
+# Send uptime to HA
   - platform: uptime
     internal: true
     name: Uptime Sensor
