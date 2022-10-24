@@ -5,9 +5,13 @@ Garage door project to convert my Liftmaster MyQ opener to local only operation.
 Component list:
 
 [ESP32](https://www.amazon.com/gp/product/B07BK435ZW/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
+
 [Relay](https://www.amazon.com/gp/product/B0798CZDR9/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
+
 [Ultrasonic](https://www.amazon.com/gp/product/B01JG09DCK/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
+
 [Project box](https://www.amazon.com/gp/product/B08PP1W8Q3/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
+
 [Backup battery](https://www.amazon.com/gp/product/B07YRZYLKV/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
 
 Everything mounted tidy in a project box. Ultrasonic tx/rx poking through the lid.
