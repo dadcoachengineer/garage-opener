@@ -18,7 +18,7 @@ Garage door project to convert my Liftmaster MyQ opener to local only operation.
 
 [Open sensor](https://www.amazon.com/gp/product/B01GJ82QE4/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1) - An open sensor is probably superflous but it is nice to have positive confirmation that the door is fully open.
 
-Circuit layout
+
 <img width="961" alt="Screenshot 2022-10-24 at 5 00 07 PM" src="https://user-images.githubusercontent.com/6666082/197638230-5ef13859-d186-4397-b882-2edd0b7aaf78.png">
 
 All sensors and controls exposed in Home Assistant
