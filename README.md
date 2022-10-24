@@ -3,6 +3,7 @@ Garage door project to convert my Liftmaster MyQ opener to local only operation.
 **ESP32 + Relay + Opener PCB + Ultrasonic Sensor**
 
 Component list:
+
 [ESP32](https://www.amazon.com/gp/product/B07BK435ZW/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
 Relay - https://www.amazon.com/gp/product/B0798CZDR9/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
 Ultrasonic - https://www.amazon.com/gp/product/B01JG09DCK/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
