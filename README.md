@@ -8,7 +8,7 @@ Garage door project to convert my Liftmaster MyQ opener to local only operation.
 
 [Relay](https://www.amazon.com/gp/product/B0798CZDR9/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) - I prefer using 3V relays so you don't have to level shift.
 
-[Ultrasonic](https://www.amazon.com/gp/product/B01JG09DCK/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) - Surprisingly accurate given the pricepoint.
+[Ultrasonic Sensor](https://www.amazon.com/gp/product/B01JG09DCK/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) - Surprisingly accurate given the pricepoint.
 
 [Project box](https://www.amazon.com/gp/product/B08PP1W8Q3/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) - These boxes are not cheap but really well built, come with water tight glands and gasketed lid.
 
