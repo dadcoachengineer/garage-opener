@@ -22,6 +22,9 @@ Garage door project to convert my Liftmaster MyQ opener to local only operation.
 Everything mounted tidy in a project box. Ultrasonic tx/rx poking through the lid.
 ![IMG_6656](https://user-images.githubusercontent.com/6666082/197527056-63d4d01e-3469-43c3-92bd-9583d641fa4e.jpg)
 
+Everything wired up.
+<img width="903" alt="Screenshot 2022-10-24 at 8 07 53 AM" src="https://user-images.githubusercontent.com/6666082/197532883-371f82c6-4992-47fc-aaa1-303b473c40eb.png">
+
 Magnetic reed switch mounted to end of track to verify open state
 ![IMG_6657](https://user-images.githubusercontent.com/6666082/197527064-1663b249-679d-456b-886e-71c61924c5a7.jpg)
 
