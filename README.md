@@ -1,4 +1,4 @@
-Fun little project to convert my Liftmaster MyQ opener to local only operation.
+Garage door project to convert my Liftmaster MyQ opener to local only operation. They have had a few outages over the past year and I also think it is quite silly to send some things to/from cloud services.
 
 ESP32 + Relay + Opener PCB + Ultrasonic Sensor
 
