@@ -18,18 +18,8 @@ Garage door project to convert my Liftmaster MyQ opener to local only operation.
 
 [Open sensor](https://www.amazon.com/gp/product/B01GJ82QE4/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1) - An open sensor is probably superflous but it is nice to have positive confirmation that the door is fully open.
 
-
-Everything mounted tidy in a project box. Ultrasonic tx/rx poking through the lid.
-![IMG_6656](https://user-images.githubusercontent.com/6666082/197527056-63d4d01e-3469-43c3-92bd-9583d641fa4e.jpg)
-
-Everything wired up.
-<img width="903" alt="Screenshot 2022-10-24 at 8 07 53 AM" src="https://user-images.githubusercontent.com/6666082/197532883-371f82c6-4992-47fc-aaa1-303b473c40eb.png">
-
-Magnetic reed switch mounted to end of track to verify open state
-![IMG_6657](https://user-images.githubusercontent.com/6666082/197527064-1663b249-679d-456b-886e-71c61924c5a7.jpg)
-
-Magnetic reed switch mounted to top of door to verify closed state
-![IMG_6658](https://user-images.githubusercontent.com/6666082/197527069-54a0d3f7-875f-4cbd-8f3d-d43318b62d37.jpg)
+Circuit layout
+<img width="961" alt="Screenshot 2022-10-24 at 5 00 07 PM" src="https://user-images.githubusercontent.com/6666082/197638230-5ef13859-d186-4397-b882-2edd0b7aaf78.png">
 
 All sensors and controls exposed in Home Assistant
 ![Screenshot 2022-10-24 at 7 37 09 AM](https://user-images.githubusercontent.com/6666082/197527087-9a2ad8cb-a5d8-41c8-92b7-350b9caf5ec6.png)
