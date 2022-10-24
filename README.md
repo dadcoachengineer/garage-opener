@@ -1,5 +1,7 @@
 Garage door project to convert my Liftmaster MyQ opener to local only operation. They have had a few outages over the past year and I also think it is quite silly to send some things to/from cloud services.
 
+[ESPhome YAML Config](https://github.com/dadcoachengineer/garage-opener/blob/main/config.yaml)
+
 **Component list:**
 
 [ESP32](https://www.amazon.com/gp/product/B07BK435ZW/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) - I have had really good luck with this brand of ESP microcontrollers.
